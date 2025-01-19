@@ -1,0 +1,15 @@
+1. Explain why a number data type added to a string data type returns a string.
+
+When a number is added to a string, JavaScript implicitly converts the number to a string and performs string concatenation instead of addition. This is due to JavaScript's type coercion behavior. For example, `1 + "1"` results in `"11"`, because the number `1` is converted to a string and concatenated with the other string `"1"`. 
+
+2. Name a scenario where using the == operator could cause a bug.
+
+The `==` operator in JavaScript performs type coercion, meaning it compares values without considering their types. For example, `1 == "1"` would return `true` because JavaScript converts the string `"1"` into a number before comparing. This could lead to unexpected behavior when you want to compare values with different types, especially when strict type checking is required. To avoid this, it's better to use the `===` operator which compares both value and type.
+
+3. Name the operator(s) that you find confusing and explain why.
+
+The `==` and `===` operators can be confusing because they behave differently. While `==` performs type coercion (converting operands to the same type before comparison), `===` checks both value and type. This difference can lead to bugs, especially when type coercion happens unexpectedly. For example, `0 == "0"` is `true`, but `0 === "0"` is `false`.
+
+4. Explain a situation where you would use the Modulus operator and why.
+
+The Modulus operator (`%`) returns the remainder of a division operation. It is useful when you want to determine if a number is divisible by another or when you need to cycle through values in a repeating pattern. For example, you might use it to check if a number is even or odd: `if (num % 2 === 0)` checks if the number is even, because even numbers have no remainder when divided by 2.
